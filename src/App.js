@@ -6,14 +6,15 @@ import { useState } from "react"
 function App() {
   const [ result, setResult ] = useState('')
   const convert = (input) => {
-    if (input.type === 'fahrenheit') {
+    // console.log(input)
+    if (input.type === 'Fahrenheit') {
       const output = (Number(input.degree) - 32) * 5 / 9
       setResult(Number.parseFloat(output).toFixed(4) + '°C')
-      console.log(output)
+      // console.log(Number.parseFloat(output).toFixed(4) + '°C')
     } else {
       const output = (Number(input.degree) * 9 / 5) + 32
       setResult(Number.parseFloat(output).toFixed(4) + '°F')
-      console.log(output)
+      // console.log(Number.parseFloat(output).toFixed(4) + '°F')
     }
   }
 
