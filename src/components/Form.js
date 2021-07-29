@@ -10,7 +10,7 @@ const Form = ({ onConvert }) => {
     // prevent actually submitting to a page
     event.preventDefault()
     // form validation
-    if (!degree) {
+    if (!degree.trim()) {
       alert('Please enter degrees!')
       return
     }
@@ -41,6 +41,7 @@ const Form = ({ onConvert }) => {
           <option value="default" name="type">Select One</option>
           <option value="Fahrenheit" name="type">Fahrenheit</option>
           <option value="Celsius" name="type">Celsius</option>
+          <option value="Kelvin" name="type">Kelvin</option>
         </select>
       </div>
       <input type="submit" className='btn' value="Convert"/>

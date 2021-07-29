@@ -11,10 +11,13 @@ function App() {
       const output = (Number(input.degree) - 32) * 5 / 9
       setResult(Number.parseFloat(output).toFixed(4) + '°C')
       // console.log(Number.parseFloat(output).toFixed(4) + '°C')
-    } else {
+    } else if (input.type === 'Celsius') {
       const output = (Number(input.degree) * 9 / 5) + 32
       setResult(Number.parseFloat(output).toFixed(4) + '°F')
       // console.log(Number.parseFloat(output).toFixed(4) + '°F')
+    } else {
+      const output = (Number(input.degree) - parseFloat(273.15))
+      setResult(Number.parseFloat(output).toFixed(4) +'°C' )
     }
   }
 
